@@ -3,33 +3,41 @@ let morseString = '';
 const morseButton = document.getElementById('morseButton');
 const collectedMorseSpan = document.getElementById('collectedMorse');
 
+
 let pressStartTime = 0;
+let pressEndTime = 0; // Initialize pressEndTime
 let pressTimer = null;
-const shortPressDuration = 100; // Short press duration in milliseconds
-const maxPressDuration = 2000; // Maximum press duration in milliseconds
+const longPressDuration = 400; // Long press duration
+const timeOutDuration = 10000; // Clear time in
 
 morseButton.addEventListener('mousedown', () => {
     pressStartTime = new Date().getTime();
 
     pressTimer = setTimeout(() => {
-        morseString += '_';
+        // Calculate press duration inside the timeout
+        pressEndTime = new Date().getTime();
+        const pressDuration = pressEndTime - pressStartTime;
+
+        if (pressDuration <= longPressDuration) {
+            morseString += '.';
+        } else if (pressDuration > longPressDuration) {
+            morseString += '_';
+        }
+
         collectedMorseSpan.textContent = morseString;
-    }, shortPressDuration);
+    }, 100);
 });
 
 morseButton.addEventListener('mouseup', () => {
-    const pressEndTime = new Date().getTime();
-    const pressDuration = pressEndTime - pressStartTime;
+    clearTimeout(pressTimer); // Clear the press timer
 
-    clearTimeout(pressTimer);
+    // Calculate time from mouseup to detect long press timeout
+    const outStartTime = new Date().getTime();
+    const pressDuration = outStartTime - pressStartTime;
 
-    if (pressDuration > shortPressDuration && pressDuration <= maxPressDuration) {
-        morseString += '.';
-        collectedMorseSpan.textContent = morseString;
-    } else if (pressDuration > maxPressDuration) {
+    if (pressDuration > timeOutDuration) {
         morseString = '';
-        collectedMorseSpan.textContent = morseString;
     }
 
-    pressStartTime = 0;
+    collectedMorseSpan.textContent = morseString;
 });
