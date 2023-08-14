@@ -3,29 +3,14 @@ let morseString = '';
 const morseButton = document.getElementById('morseButton');
 const collectedMorseSpan = document.getElementById('collectedMorse');
 
-
 let pressStartTime = 0;
 let pressEndTime = 0; // Initialize pressEndTime
 let pressTimer = null;
 const longPressDuration = 400; // Long press duration
-const timeOutDuration = 10000; // Clear time in
+const timeOutDuration = 5000; // Clear time in
 
 morseButton.addEventListener('mousedown', () => {
     pressStartTime = new Date().getTime();
-
-    pressTimer = setTimeout(() => {
-        // Calculate press duration inside the timeout
-        pressEndTime = new Date().getTime();
-        const pressDuration = pressEndTime - pressStartTime;
-
-        if (pressDuration <= longPressDuration) {
-            morseString += '.';
-        } else if (pressDuration > longPressDuration) {
-            morseString += '_';
-        }
-
-        collectedMorseSpan.textContent = morseString;
-    }, 100);
 });
 
 morseButton.addEventListener('mouseup', () => {
@@ -35,9 +20,20 @@ morseButton.addEventListener('mouseup', () => {
     const outStartTime = new Date().getTime();
     const pressDuration = outStartTime - pressStartTime;
 
-    if (pressDuration > timeOutDuration) {
-        morseString = '';
+    if (pressDuration <= longPressDuration) {
+        morseString += '.';
+    } else if (pressDuration >= longPressDuration){
+        morseString += '-';
     }
 
     collectedMorseSpan.textContent = morseString;
 });
+
+/* Morse Reading n shouting Section */
+
+const morse = require('morse-decoder');
+const decode = document.getElementById('Decoded');
+const DecodedMorseCode = (morse.decode('morseString'));
+
+
+decode.textContent = DecodedMorseCode;
