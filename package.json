@@ -1,6 +1,5 @@
 {
-  "dependencies": {
-    "morse-decoder": "^3.0.1",
-    "simple-keyboard": "^3.6.39"
-  }
+    "dependencies": {
+        "morse-decoder": "^3.0.1"
+    }
 }
