@@ -13,18 +13,35 @@
 body{
   font-family: 'Nunito', sans-serif;
 }
+
+.a { 
+  text-decoration: none; 
+}
+
+/*#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}*/
+
 .card{
-    border-radius: 4px;
-    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    background: rgb(58, 58, 58);
     box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-  padding: 14px 80px 18px 36px;
-  cursor: pointer;
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 14px 80px 18px 36px;
+    cursor: pointer;
 }
 
 .card:hover{
      transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
 .card h3{
@@ -39,24 +56,24 @@ body{
 }
 
 .card-1{
-  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
-      background-repeat: no-repeat;
+  background-image: url(../img/660376.png);
+    background-repeat: no-repeat;
     background-position: right;
-    background-size: 80px;
+    background-size: 150px;
 }
 
 .card-2{
-   background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
-      background-repeat: no-repeat;
+   background-image: url(../img/4403464.png);
+    background-repeat: no-repeat;
     background-position: right;
-    background-size: 80px;
+    background-size: 150px;
 }
 
 .card-3{
-   background-image: url(https://ionicframework.com/img/getting-started/theming-card.png);
+   background-image: url(../img/1581942.png);
       background-repeat: no-repeat;
     background-position: right;
-    background-size: 80px;
+    background-size: 120px;
 }
 
 @media(max-width: 990px){
