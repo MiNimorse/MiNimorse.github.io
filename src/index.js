@@ -1,5 +1,3 @@
-//import morseDecoder from 'morse-decoder';
-
 let morseString = '';
 
 const morseButton = document.getElementById('morseButton');
@@ -21,8 +19,7 @@ function clearMorseString() {
 
 function decodeMorse() {
     const morseDecoder = require('morse-decoder');
-    const characters = morseDecoder.characters();
-    const decodedMorseCode = morseDecoder.decode('.-');
+    const decodedMorseCode = morseDecoder.decode('morseString');
     const decode = document.getElementById('Decoded');
     decode.textContent = decodedMorseCode;
 }
