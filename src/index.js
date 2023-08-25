@@ -9,8 +9,15 @@ let pressTimer = null;
 const longPressDuration = 400; // Long press duration
 const timeOutDuration = 5000; // Clear time in
 
-let autoDecodeTimer = null;
-const autoDecodeTimeout = 3000; // Auto decode timeout duration
+// let autoDecodeTimer = null;
+// const autoDecodeTimeout = 3000;
+
+const Alphabetwant = ['A,B']
+
+function RandomAlpha() {
+    Math.random() * Alphabetwant.length;
+
+}
 
 function clearMorseString() {
     morseString = '';
@@ -47,7 +54,6 @@ morseButton.addEventListener('mouseup', () => {
         clearTimeout(autoDecodeTimer); // Reset the auto decode timer
     }
 
-    // Set a new auto decode timer
     autoDecodeTimer = setTimeout(() => {
         decodeMorse();
         clearMorseString();
