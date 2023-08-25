@@ -89,11 +89,9 @@ Contributions are welcome.
 Install node and npm and run the commands below.
 
 ``` bash
+$ npm install --global gulp-cli
 $ npm install
-# generate `index.js` inside `src`
-$ npm run build
-# generate `morse-decoder.min.js` (minified) inside `dist`
-$ npm run build-rel
+$ gulp
 ```
 
 ## License
