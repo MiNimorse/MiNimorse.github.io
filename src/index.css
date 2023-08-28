@@ -25,6 +25,12 @@ body {
     text-decoration: none;
 }
 
+.bi {
+    color: black;
+    width: 24;
+    height: 24;
+}
+
 #background-video {
     width: 100vw;
     height: 100vh;
