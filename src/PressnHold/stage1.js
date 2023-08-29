@@ -1,19 +1,24 @@
-let morseString = '';
-
 const morseButton = document.getElementById('morseButton');
 const collectedMorseSpan = document.getElementById('collectedMorse');
 const AlphabetHead = document.getElementById('AlphabetHead');
 const Point = document.getElementById('GamePoint');
 
+let morseString = '';
+let GamePoint = 0;
 let pressStartTime = 0;
 let pressTimer = null;
 const longPressDuration = 400;
-const decodeTime = 3000;
-const timeOutDuration = 2000;
+const timeOutDuration = 3000;
 
 const Alphabetwant = ['A', 'G'];
 
-let GamePoint = 0;
+function manualDecode() {
+    if (morseString == '.-') {
+        morseString = 'A';
+    } else if (morseString == '--.') {
+        morseString = 'G';
+    }
+}
 
 // https://en.wikipedia.org/wiki/Morse_code
 // 'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.',
@@ -32,14 +37,6 @@ function RandomAlpha() {
 function clearMorseString() {
     morseString = '';
     collectedMorseSpan.textContent = morseString;
-}
-
-function manualDecode() {
-    if (morseString == '.-') {
-        morseString = 'A';
-    } else if (morseString == '--') {
-        morseString = 'G';
-    }
 }
 
 morseButton.addEventListener('mousedown', () => {
@@ -78,7 +75,6 @@ morseButton.addEventListener('mouseup', () => {
 
 function Update() {
     Point.textContent = GamePoint;
-
 }
 
 function RandomNext() {
