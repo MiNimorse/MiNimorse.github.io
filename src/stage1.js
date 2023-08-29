@@ -9,11 +9,11 @@ let pressStartTime = 0;
 let pressTimer = null;
 const longPressDuration = 400;
 const decodeTime = 3000;
-const timeOutDuration = 5000;
+const timeOutDuration = 2000;
 
-const Alphabetwant = ['A', 'E'];
+const Alphabetwant = ['A', 'G'];
 
-const GamePoint = 0;
+let GamePoint = 0;
 
 // https://en.wikipedia.org/wiki/Morse_code
 // 'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.',
@@ -37,8 +37,8 @@ function clearMorseString() {
 function manualDecode() {
     if (morseString == '.-') {
         morseString = 'A';
-    } else if (morseString == '.') {
-        morseString = 'E';
+    } else if (morseString == '--') {
+        morseString = 'G';
     }
 }
 
@@ -54,27 +54,22 @@ morseButton.addEventListener('mouseup', () => {
     clearTimeout(pressTimer);
     const pressEndTime = new Date().getTime();
     const pressDuration = pressEndTime - pressStartTime;
-    GamePoint.textContent = Point;
+    Update();
 
     if (pressDuration <= longPressDuration) {
         morseString += '.';
         collectedMorseSpan.textContent = morseString;
     }
 
-    // Compare the entered morseString with the corresponding morse code
     const currentAlphabet = AlphabetHead.textContent;
     //const morseDecoder = require('morse-decoder');
     // const morseAlphabet = morseDecoder.decode(morseString);
 
     manualDecode();
 
-    console.log(GamePoint);
-    GamePoint.textContent = Point;
-
-
     if (morseString == currentAlphabet) {
         GamePoint += 1;
-        GamePoint.textContent = GamePoint;
+        Update();
         clearMorseString();
         RandomNext();
     }
@@ -82,7 +77,7 @@ morseButton.addEventListener('mouseup', () => {
 });
 
 function Update() {
-    GamePoint.textContent = Point;
+    Point.textContent = GamePoint;
 
 }
 
@@ -97,4 +92,6 @@ function repeatClear() {
     setTimeout(repeatClear, timeOutDuration);
 }
 
+repeatClear();
 RandomNext();
+Update();
