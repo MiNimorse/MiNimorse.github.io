@@ -50,7 +50,9 @@
     <div class="position-absolute top-50 start-50 translate-middle">
         <div class="con">
             <div class="card">
-                <a href="menu.html"><img src="img/B logo.png" class="rounded-4 img-fluid"></a>
+                <div class="content">
+                    <a href="menu.html"><img src="img/B logo.png" class="rounded-4 img-fluid"></a>
+                </div>
             </div>
         </div>
         
@@ -65,6 +67,14 @@
 
     <!--JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/bootstrap-5.3.1-dist/js/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".card"), {
+		max: 25,
+		speed: 200,
+        glare: true,
+	    "max-glare": 1});
+    </script>
 </body>
 
 </html>

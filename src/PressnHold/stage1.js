@@ -10,13 +10,15 @@ let pressTimer = null;
 const longPressDuration = 400;
 const timeOutDuration = 3000;
 
-const Alphabetwant = ['A', 'G'];
+const Alphabetwant = ['A', 'G','E'];
 
 function manualDecode() {
     if (morseString == '.-') {
         morseString = 'A';
     } else if (morseString == '--.') {
         morseString = 'G';
+    } else if (morseString == '.') {
+        morseString = 'E';
     }
 }
 
