@@ -75,11 +75,10 @@ body::before
     transform: translateY(0px);
     opacity: 1;
 }
-.container .card .content h2
+.container .card  h2
 {
     position: absolute;
-    top: -80px;
-    right: 30px;
+    align-items: center;
     font-size: 8em;
     color: rgba(255, 255, 255, 0.5);
     pointer-events: none;
