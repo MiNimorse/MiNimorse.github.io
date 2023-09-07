@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <script src="/node_modules/morse-decoder/src/index.js"></script>
-    <script src="/node_modules/morse-decoder/dist/morse-decoder.min.js"></script> -->
 </head>
 
 <body>
 
     <section class="center">
-        <p> Stage 1 : A .- / G --.</p>
+        <p> Stage <span id="StageName"></p>
         <p>Press this in morse: <span id="AlphabetHead"></span></p>
         <button id="morseButton" class="btn btn-info">Press and hold for Morse code</button>
         <p>Collected Morse code: <span id="collectedMorse"></span></p>
@@ -20,7 +18,7 @@
 
     </section>
 
-    <script src="/src/PressnHold/stage1.js"></script>
+    <script src="PressnHold.js"></script>
 
 
 </body>
