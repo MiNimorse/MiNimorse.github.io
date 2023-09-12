@@ -1,0 +1,21 @@
+.btn
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #212529;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.btn:hover
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    font-weight: 500;
+}
