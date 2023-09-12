@@ -1,3 +1,7 @@
+// To do list
+//  -Time out
+//  -
+
 $(document).ready(function() {
     let Alphabetwant = [''];
     let morseString = '';
@@ -13,31 +17,113 @@ $(document).ready(function() {
     const Point = $('#GamePoint');
 
     function manualDecode() {
-        if (Alphabetwant == 'E', 'T') {
+        if (Alphabetwant.includes('E') || Alphabetwant.includes('T')) {
             if (morseString === '.') {
                 morseString = 'E';
             } else if (morseString === '-') {
                 morseString = 'T';
             }
-        } else if (Alphabetwant == 'I', 'M') {
+        } else if (Alphabetwant.includes('I') || Alphabetwant.includes('M')) {
             if (morseString === '..') {
                 morseString = 'I';
             } else if (morseString === '--') {
                 morseString = 'M';
             }
-        } else if (Alphabetwant == 'A', 'N') {
+        } else if (Alphabetwant.includes('A') || Alphabetwant.includes('N')) {
             if (morseString === '.-') {
                 morseString = 'A';
             } else if (morseString === '-.') {
                 morseString = 'N';
             }
-        } else if (Alphabetwant === ['']) {
-            console.log("Arai")
-        } else {
-            console.log("??")
-            console.log(Alphabetwant)
+        } else if (Alphabetwant.includes('S') || Alphabetwant.includes('O')) {
+            if (morseString === '...') {
+                morseString = 'S';
+            } else if (morseString === '---') {
+                morseString = 'O';
+            }
+        } else if (Alphabetwant.includes('U') || Alphabetwant.includes('G')) {
+            if (morseString === '..-') {
+                morseString = 'U';
+            } else if (morseString === '--.') {
+                morseString = 'G';
+            }
+        } else if (Alphabetwant.includes('R') || Alphabetwant.includes('K')) {
+            if (morseString === '.-.') {
+                morseString = 'R';
+            } else if (morseString === '-.-') {
+                morseString = 'K';
+            }
+        } else if (Alphabetwant.includes('W') || Alphabetwant.includes('D')) {
+            if (morseString === '.--') {
+                morseString = 'W';
+            } else if (morseString === '-..') {
+                morseString = 'D';
+            }
+        } else if (Alphabetwant.includes('H') || Alphabetwant.includes('Q')) {
+            if (morseString === '....') {
+                morseString = 'H';
+            } else if (morseString === '--.-') {
+                morseString = 'Q';
+            }
+        } else if (Alphabetwant.includes('V') || Alphabetwant.includes('Z')) {
+            if (morseString === '...-') {
+                morseString = 'V';
+            } else if (morseString === '--..') {
+                morseString = 'Z';
+            }
+        } else if (Alphabetwant.includes('F') || Alphabetwant.includes('Y')) {
+            if (morseString === '..-.') {
+                morseString = 'F';
+            } else if (morseString === '-.--') {
+                morseString = 'Y';
+            }
+        } else if (Alphabetwant.includes('L') || Alphabetwant.includes('C')) {
+            if (morseString === '.-..') {
+                morseString = 'L';
+            } else if (morseString === '-.-.') {
+                morseString = 'C';
+            }
+        } else if (Alphabetwant.includes('P') || Alphabetwant.includes('X')) {
+            if (morseString === '.--.') {
+                morseString = 'P';
+            } else if (morseString === '-..-') {
+                morseString = 'X';
+            }
+        } else if (Alphabetwant.includes('J') || Alphabetwant.includes('B')) {
+            if (morseString === '.---') {
+                morseString = 'J';
+            } else if (morseString === '-...') {
+                morseString = 'B';
+            }
         }
 
+    }
+
+    function RandomAlpha() {
+        const Randomlaw = Math.floor(Math.random() * Alphabetwant.length);
+        const AlphabetNow = Alphabetwant[Randomlaw];
+        AlphabetHead.text(AlphabetNow);
+        return AlphabetNow;
+    }
+
+
+    function Update() {
+        Point.text(GamePoint);
+    }
+
+    function RandomNext() {
+        const selectedAlphabet = RandomAlpha();
+        AlphabetHead.text(selectedAlphabet);
+    }
+
+    function clearMorseString() {
+        morseString = '';
+        collectedMorseSpan.text(morseString);
+    }
+
+    function repeatClear() {
+        clearMorseString();
+        setTimeout(repeatClear, timeOutDuration);
     }
 
     morseButton.mousedown(function() {
@@ -70,31 +156,6 @@ $(document).ready(function() {
         }
     });
 
-    function RandomAlpha() {
-        const Randomlaw = Math.floor(Math.random() * Alphabetwant.length);
-        const AlphabetNow = Alphabetwant[Randomlaw];
-        return AlphabetNow;
-    }
-
-    function Update() {
-        Point.text(GamePoint);
-    }
-
-    function RandomNext() {
-        const selectedAlphabet = RandomAlpha();
-        AlphabetHead.text(selectedAlphabet);
-    }
-
-    function clearMorseString() {
-        morseString = '';
-        collectedMorseSpan.text(morseString);
-    }
-
-    function repeatClear() {
-        clearMorseString();
-        setTimeout(repeatClear, timeOutDuration);
-    }
-
     repeatClear();
     RandomNext();
     Update();
@@ -121,6 +182,8 @@ $(document).ready(function() {
         if (buttonIndex >= 0 && buttonIndex < arrays.length) {
             Alphabetwant = arrays[buttonIndex]; // Reassign the variable Alphabetwant
             RandomAlpha();
+            GamePoint = 0;
+            Update();
             console.log('Alphabetwant array has been changed to:', Alphabetwant);
             $('.changeArrayButton').hide();
             $("#Main").show();
@@ -140,8 +203,6 @@ $(document).ready(function() {
         $('.changeArrayButton').show();
         $("#Main").hide();
         $('#Back').hide();
-
-
     });
 
 });
