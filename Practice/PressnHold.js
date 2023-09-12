@@ -13,42 +13,31 @@ $(document).ready(function() {
     const Point = $('#GamePoint');
 
     function manualDecode() {
-        if (Alphabetwant == 'E','T') {
+        if (Alphabetwant == 'E', 'T') {
             if (morseString === '.') {
-            morseString = 'E';
-        } else if (morseString === '-') {
-            morseString = 'T';
-        }
-        }
-        else if (Alphabetwant == 'I','M') {
+                morseString = 'E';
+            } else if (morseString === '-') {
+                morseString = 'T';
+            }
+        } else if (Alphabetwant == 'I', 'M') {
             if (morseString === '..') {
-            morseString = 'I';
-        } else if (morseString === '--') {
-            morseString = 'M';
-        }
-        }
-        else if (Alphabetwant == 'A','N') {
+                morseString = 'I';
+            } else if (morseString === '--') {
+                morseString = 'M';
+            }
+        } else if (Alphabetwant == 'A', 'N') {
             if (morseString === '.-') {
-            morseString = 'A';
-        } else if (morseString === '-.') {
-            morseString = 'N';
+                morseString = 'A';
+            } else if (morseString === '-.') {
+                morseString = 'N';
+            }
+        } else if (Alphabetwant === ['']) {
+            console.log("Arai")
+        } else {
+            console.log("??")
+            console.log(Alphabetwant)
         }
-        }
-        else if (Alphabetwant == ['']) {console.log("Arai")}
-        else {console.log("??")
-              console.log(Alphabetwant)}
-    
-}
 
-    function RandomAlpha() {
-        const Randomlaw = Math.floor(Math.random() * Alphabetwant.length);
-        const AlphabetNow = Alphabetwant[Randomlaw];
-        return AlphabetNow;
-    }
-
-    function clearMorseString() {
-        morseString = '';
-        collectedMorseSpan.text(morseString);
     }
 
     morseButton.mousedown(function() {
@@ -81,6 +70,12 @@ $(document).ready(function() {
         }
     });
 
+    function RandomAlpha() {
+        const Randomlaw = Math.floor(Math.random() * Alphabetwant.length);
+        const AlphabetNow = Alphabetwant[Randomlaw];
+        return AlphabetNow;
+    }
+
     function Update() {
         Point.text(GamePoint);
     }
@@ -88,6 +83,11 @@ $(document).ready(function() {
     function RandomNext() {
         const selectedAlphabet = RandomAlpha();
         AlphabetHead.text(selectedAlphabet);
+    }
+
+    function clearMorseString() {
+        morseString = '';
+        collectedMorseSpan.text(morseString);
     }
 
     function repeatClear() {
@@ -99,34 +99,49 @@ $(document).ready(function() {
     RandomNext();
     Update();
 
-/////////////////////////////////////////////////
+    /////////////////////////////////////////////////
 
-function changeArray(buttonIndex) {
-    const arrays = [
-        ['E', 'T'],
-        ['I', 'M'],
-        ['A', 'N']
-        
-    ];
+    function changeArray(buttonIndex) {
+        const arrays = [
+            ['E', 'T'], //  .    / -
+            ['I', 'M'], //  ..   / --
+            ['A', 'N'], //  .-   / -.
+            ['S', 'O'], //  ...  / ---
+            ['U', 'G'], //  ..-  / --.
+            ['R', 'K'], //  .-.  / -.-
+            ['W', 'D'], //  .--  / -..
+            ['H', 'Q'], //  .... / --.-
+            ['V', 'Z'], //  ...- / --..
+            ['F', 'Y'], //  ..-. / -.--
+            ['L', 'C'], //  .-.. / -.-.
+            ['P', 'X'], //  .--. / -..-
+            ['J', 'B'] //  .--- / -...
+        ];
 
         if (buttonIndex >= 0 && buttonIndex < arrays.length) {
             Alphabetwant = arrays[buttonIndex]; // Reassign the variable Alphabetwant
             RandomAlpha();
             console.log('Alphabetwant array has been changed to:', Alphabetwant);
             $('.changeArrayButton').hide();
+            $("#Main").show();
+            $('#Back').show();
         } else {
             console.log('Invalid button index:', buttonIndex);
         }
     }
 
-$('.changeArrayButton').click(function() {
-    // Get the index of the button clicked (0-based)
-    const buttonIndex = $('.changeArrayButton').index(this);
-    changeArray(buttonIndex);
-});
+    $('.changeArrayButton').click(function() {
+        // Get the index of the button clicked (0-based)
+        const buttonIndex = $('.changeArrayButton').index(this);
+        changeArray(buttonIndex);
+    });
 
-$('#showAllButtons').click(function() {
-    $('.changeArrayButton').show();
-});
+    $('#Back').click(function() {
+        $('.changeArrayButton').show();
+        $("#Main").hide();
+        $('#Back').hide();
+
+
+    });
 
 });

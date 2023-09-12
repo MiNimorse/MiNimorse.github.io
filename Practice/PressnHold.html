@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,17 +13,22 @@
 <body>
 
     <section class="center">
-        <p> Stage <span id="StageName"></p>
+        <div id="Setting">
+            <button class="changeArrayButton">Stage E-T</button>
+            <button class="changeArrayButton">Stage I-M</button>
+            <button class="changeArrayButton">Stage A-N</button>
+            <button id="Back" style="display: none;">Back</button>
+        </div>
+
+        <div id="Main" style="display: none;">
+            <p> Stage <span id="StageName"></p>
         <p>Press this in morse: <span id="AlphabetHead"></span></p>
-        <button id="morseButton" class="btn btn-info">Press and hold for Morse code</button>
-        <p>Collected Morse code: <span id="collectedMorse"></span></p>
+            <button id="morseButton" class="btn btn-info">Press and hold for Morse code</button>
+            <p>Collected Morse code: <span id="collectedMorse"></span></p>
+            <p>Point: <span id="GamePoint"></span></p>
+        </div>
 
-        <p>Point: <span id="GamePoint"></span></p>
 
-        <button class="changeArrayButton">Change Array 1</button>
-        <button class="changeArrayButton">Change Array 2</button>
-        <button class="changeArrayButton">Change Array 3</button>
-        <button id="showAllButtons">Show All Buttons</button>
 
     </section>
 
