@@ -1,93 +1,132 @@
-const morseButton = document.getElementById('morseButton');
-const collectedMorseSpan = document.getElementById('collectedMorse');
-const AlphabetHead = document.getElementById('AlphabetHead');
-const Point = document.getElementById('GamePoint');
+$(document).ready(function() {
+    let Alphabetwant = [''];
+    let morseString = '';
+    let GamePoint = 0;
+    let pressStartTime = 0;
+    let pressTimer = null;
+    const longPressDuration = 400;
+    const timeOutDuration = 3000;
 
-let morseString = '';
-let GamePoint = 0;
-let pressStartTime = 0;
-let pressTimer = null;
-const longPressDuration = 400;
-const timeOutDuration = 3000;
+    const morseButton = $('#morseButton');
+    const collectedMorseSpan = $('#collectedMorse');
+    const AlphabetHead = $('#AlphabetHead');
+    const Point = $('#GamePoint');
 
-const Alphabetwant = ['E', 'T'];
+    function manualDecode() {
+        if (Alphabetwant == 'E','T') {
+            if (morseString === '.') {
+            morseString = 'E';
+        } else if (morseString === '-') {
+            morseString = 'T';
+        }
+        }
+        else if (Alphabetwant == 'I','M') {
+            if (morseString === '..') {
+            morseString = 'I';
+        } else if (morseString === '--') {
+            morseString = 'M';
+        }
+        }
+        else if (Alphabetwant == 'A','N') {
+            if (morseString === '.-') {
+            morseString = 'A';
+        } else if (morseString === '-.') {
+            morseString = 'N';
+        }
+        }
+        else if (Alphabetwant == ['']) {console.log("Arai")}
+        else {console.log("??")
+              console.log(Alphabetwant)}
+    
+}
 
-function manualDecode() {
-    if (morseString == '.') {
-        morseString = 'E';
-    } else if (morseString == '-') {
-        morseString = 'T';
+    function RandomAlpha() {
+        const Randomlaw = Math.floor(Math.random() * Alphabetwant.length);
+        const AlphabetNow = Alphabetwant[Randomlaw];
+        return AlphabetNow;
     }
-}
 
-// https://en.wikipedia.org/wiki/Morse_code
-// 'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.',
-// 'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '..-.',
-// 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.',
-// 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
-// 'Y': '-.--', 'Z': '--..'
+    function clearMorseString() {
+        morseString = '';
+        collectedMorseSpan.text(morseString);
+    }
 
-function RandomAlpha() {
-    let Randomlaw = Math.floor(Math.random() * Alphabetwant.length);
-    const AlphabetNow = Alphabetwant[Randomlaw];
+    morseButton.mousedown(function() {
+        pressStartTime = new Date().getTime();
+        pressTimer = setTimeout(function() {
+            morseString += '-';
+            collectedMorseSpan.text(morseString);
+        }, longPressDuration);
+    });
 
-    return AlphabetNow;
-}
+    morseButton.mouseup(function() {
+        clearTimeout(pressTimer);
+        const pressEndTime = new Date().getTime();
+        const pressDuration = pressEndTime - pressStartTime;
+        Update();
 
-function clearMorseString() {
-    morseString = '';
-    collectedMorseSpan.textContent = morseString;
-}
+        if (pressDuration <= longPressDuration) {
+            morseString += '.';
+            collectedMorseSpan.text(morseString);
+        }
 
-morseButton.addEventListener('mousedown', () => {
-    pressStartTime = new Date().getTime();
-    pressTimer = setTimeout(() => {
-        morseString += '-';
-        collectedMorseSpan.textContent = morseString;
-    }, longPressDuration);
-});
+        const currentAlphabet = AlphabetHead.text();
+        manualDecode();
 
-morseButton.addEventListener('mouseup', () => {
-    clearTimeout(pressTimer);
-    const pressEndTime = new Date().getTime();
-    const pressDuration = pressEndTime - pressStartTime;
+        if (morseString === currentAlphabet) {
+            GamePoint += 1;
+            Update();
+            clearMorseString();
+            RandomNext();
+        }
+    });
+
+    function Update() {
+        Point.text(GamePoint);
+    }
+
+    function RandomNext() {
+        const selectedAlphabet = RandomAlpha();
+        AlphabetHead.text(selectedAlphabet);
+    }
+
+    function repeatClear() {
+        clearMorseString();
+        setTimeout(repeatClear, timeOutDuration);
+    }
+
+    repeatClear();
+    RandomNext();
     Update();
 
-    if (pressDuration <= longPressDuration) {
-        morseString += '.';
-        collectedMorseSpan.textContent = morseString;
+/////////////////////////////////////////////////
+
+function changeArray(buttonIndex) {
+    const arrays = [
+        ['E', 'T'],
+        ['I', 'M'],
+        ['A', 'N']
+        
+    ];
+
+        if (buttonIndex >= 0 && buttonIndex < arrays.length) {
+            Alphabetwant = arrays[buttonIndex]; // Reassign the variable Alphabetwant
+            RandomAlpha();
+            console.log('Alphabetwant array has been changed to:', Alphabetwant);
+            $('.changeArrayButton').hide();
+        } else {
+            console.log('Invalid button index:', buttonIndex);
+        }
     }
 
-    const currentAlphabet = AlphabetHead.textContent;
-    //const morseDecoder = require('morse-decoder');
-    // const morseAlphabet = morseDecoder.decode(morseString);
-
-    manualDecode();
-
-    if (morseString == currentAlphabet) {
-        GamePoint += 1;
-        Update();
-        clearMorseString();
-        RandomNext();
-    }
-
+$('.changeArrayButton').click(function() {
+    // Get the index of the button clicked (0-based)
+    const buttonIndex = $('.changeArrayButton').index(this);
+    changeArray(buttonIndex);
 });
 
-function Update() {
-    Point.textContent = GamePoint;
-}
+$('#showAllButtons').click(function() {
+    $('.changeArrayButton').show();
+});
 
-function RandomNext() {
-    const selectedAlphabet = RandomAlpha();
-    AlphabetHead.textContent = selectedAlphabet;
-}
-
-// Clear the Morse string after the specified timeout
-function repeatClear() {
-    clearMorseString();
-    setTimeout(repeatClear, timeOutDuration);
-}
-
-repeatClear();
-RandomNext();
-Update();
+});
