@@ -1,6 +1,5 @@
 // To do list
-//  -Time out
-//  -
+//  -Stage name
 
 $(document).ready(function() {
     let Alphabetwant = [''];
@@ -15,81 +14,95 @@ $(document).ready(function() {
     const collectedMorseSpan = $('#collectedMorse');
     const AlphabetHead = $('#AlphabetHead');
     const Point = $('#GamePoint');
+    const Stage = $('#StageName');
 
     function manualDecode() {
         if (Alphabetwant.includes('E') || Alphabetwant.includes('T')) {
+            timeOutDuration = 3000;
             if (morseString === '.') {
                 morseString = 'E';
             } else if (morseString === '-') {
                 morseString = 'T';
             }
         } else if (Alphabetwant.includes('I') || Alphabetwant.includes('M')) {
+            timeOutDuration = 3000;
             if (morseString === '..') {
                 morseString = 'I';
             } else if (morseString === '--') {
                 morseString = 'M';
             }
         } else if (Alphabetwant.includes('A') || Alphabetwant.includes('N')) {
+            timeOutDuration = 3000;
             if (morseString === '.-') {
                 morseString = 'A';
             } else if (morseString === '-.') {
                 morseString = 'N';
             }
         } else if (Alphabetwant.includes('S') || Alphabetwant.includes('O')) {
+            timeOutDuration = 4500;
             if (morseString === '...') {
                 morseString = 'S';
             } else if (morseString === '---') {
                 morseString = 'O';
             }
         } else if (Alphabetwant.includes('U') || Alphabetwant.includes('G')) {
+            timeOutDuration = 4500;
             if (morseString === '..-') {
                 morseString = 'U';
             } else if (morseString === '--.') {
                 morseString = 'G';
             }
         } else if (Alphabetwant.includes('R') || Alphabetwant.includes('K')) {
+            timeOutDuration = 4500;
             if (morseString === '.-.') {
                 morseString = 'R';
             } else if (morseString === '-.-') {
                 morseString = 'K';
             }
         } else if (Alphabetwant.includes('W') || Alphabetwant.includes('D')) {
+            timeOutDuration = 4500;
             if (morseString === '.--') {
                 morseString = 'W';
             } else if (morseString === '-..') {
                 morseString = 'D';
             }
         } else if (Alphabetwant.includes('H') || Alphabetwant.includes('Q')) {
+            timeOutDuration = 5000;
             if (morseString === '....') {
                 morseString = 'H';
             } else if (morseString === '--.-') {
                 morseString = 'Q';
             }
         } else if (Alphabetwant.includes('V') || Alphabetwant.includes('Z')) {
+            timeOutDuration = 5000;
             if (morseString === '...-') {
                 morseString = 'V';
             } else if (morseString === '--..') {
                 morseString = 'Z';
             }
         } else if (Alphabetwant.includes('F') || Alphabetwant.includes('Y')) {
+            timeOutDuration = 5000;
             if (morseString === '..-.') {
                 morseString = 'F';
             } else if (morseString === '-.--') {
                 morseString = 'Y';
             }
         } else if (Alphabetwant.includes('L') || Alphabetwant.includes('C')) {
+            timeOutDuration = 5000;
             if (morseString === '.-..') {
                 morseString = 'L';
             } else if (morseString === '-.-.') {
                 morseString = 'C';
             }
         } else if (Alphabetwant.includes('P') || Alphabetwant.includes('X')) {
+            timeOutDuration = 5000;
             if (morseString === '.--.') {
                 morseString = 'P';
             } else if (morseString === '-..-') {
                 morseString = 'X';
             }
         } else if (Alphabetwant.includes('J') || Alphabetwant.includes('B')) {
+            timeOutDuration = 5000;
             if (morseString === '.---') {
                 morseString = 'J';
             } else if (morseString === '-...') {
@@ -105,7 +118,6 @@ $(document).ready(function() {
         AlphabetHead.text(AlphabetNow);
         return AlphabetNow;
     }
-
 
     function Update() {
         Point.text(GamePoint);
@@ -162,7 +174,7 @@ $(document).ready(function() {
 
     /////////////////////////////////////////////////
 
-    function changeArray(buttonIndex) {
+    function changeStage(buttonIndex) {
         const arrays = [
             ['E', 'T'], //  .    / -
             ['I', 'M'], //  ..   / --
@@ -180,12 +192,12 @@ $(document).ready(function() {
         ];
 
         if (buttonIndex >= 0 && buttonIndex < arrays.length) {
-            Alphabetwant = arrays[buttonIndex]; // Reassign the variable Alphabetwant
+            Alphabetwant = arrays[buttonIndex];
             RandomAlpha();
             GamePoint = 0;
             Update();
             console.log('Alphabetwant array has been changed to:', Alphabetwant);
-            $('.changeArrayButton').hide();
+            $('.changeStageButton').hide();
             $("#Main").show();
             $('#Back').show();
         } else {
@@ -193,14 +205,13 @@ $(document).ready(function() {
         }
     }
 
-    $('.changeArrayButton').click(function() {
-        // Get the index of the button clicked (0-based)
-        const buttonIndex = $('.changeArrayButton').index(this);
-        changeArray(buttonIndex);
+    $('.changeStageButton').click(function() {
+        const buttonIndex = $('.changeStageButton').index(this);
+        changeStage(buttonIndex);
     });
 
     $('#Back').click(function() {
-        $('.changeArrayButton').show();
+        $('.changeStageButton').show();
         $("#Main").hide();
         $('#Back').hide();
     });
