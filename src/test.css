@@ -1,5 +1,4 @@
-.btn
-{
+.btn {
     position: relative;
     display: inline-block;
     padding: 8px 20px;
@@ -9,8 +8,7 @@
     font-weight: 500;
 }
 
-.btn:hover
-{
+.btn:hover {
     position: relative;
     display: inline-block;
     padding: 8px 20px;
@@ -18,4 +16,15 @@
     color: rgb(0, 0, 0);
     border-radius: 20px;
     font-weight: 500;
+}
+
+.Minecraft h1 {
+    font-size: 1000%;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.Minecraft p {
+    font-weight: 500;
+    color: rgb(255, 255, 255);
 }

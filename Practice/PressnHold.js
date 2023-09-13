@@ -1,20 +1,18 @@
-// To do list
-//  -Stage name
-
 $(document).ready(function() {
     let Alphabetwant = [''];
     let morseString = '';
     let GamePoint = 0;
     let pressStartTime = 0;
     let pressTimer = null;
+    let timeOutDuration = 3000;
     const longPressDuration = 400;
-    const timeOutDuration = 3000;
+
 
     const morseButton = $('#morseButton');
     const collectedMorseSpan = $('#collectedMorse');
     const AlphabetHead = $('#AlphabetHead');
     const Point = $('#GamePoint');
-    const Stage = $('#StageName');
+    const DisplayStage = $('#StageName');
 
     function manualDecode() {
         if (Alphabetwant.includes('E') || Alphabetwant.includes('T')) {
@@ -138,6 +136,15 @@ $(document).ready(function() {
         setTimeout(repeatClear, timeOutDuration);
     }
 
+    function StageName(array) {
+        DisplayStage.empty();
+        for (let i = 0; i < array.length; i++) {
+            const character = array[i];
+            const characterElement = $('<span>').text(character + ' '); //you can add word between char by change that ' '
+            DisplayStage.append(characterElement);
+        }
+    }
+
     morseButton.mousedown(function() {
         pressStartTime = new Date().getTime();
         pressTimer = setTimeout(function() {
@@ -196,10 +203,13 @@ $(document).ready(function() {
             RandomAlpha();
             GamePoint = 0;
             Update();
+            StageName(Alphabetwant);
             console.log('Alphabetwant array has been changed to:', Alphabetwant);
             $('.changeStageButton').hide();
             $("#Main").show();
+            $('#MainHide').hide();
             $('#Back').show();
+            $('#BackHide').show();
         } else {
             console.log('Invalid button index:', buttonIndex);
         }
@@ -213,7 +223,9 @@ $(document).ready(function() {
     $('#Back').click(function() {
         $('.changeStageButton').show();
         $("#Main").hide();
+        $('#MainHide').show();
         $('#Back').hide();
+        $('#BackHide').hide();
     });
 
 });
