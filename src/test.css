@@ -2,7 +2,7 @@
     position: relative;
     display: inline-block;
     padding: 8px 20px;
-    background: #212529;
+    background: #000000;
     color: rgb(255, 255, 255);
     border-radius: 20px;
     font-weight: 500;
@@ -19,12 +19,17 @@
 }
 
 .Minecraft h1 {
-    font-size: 1000%;
+    font-size: 2500%;
     font-weight: 500;
     color: rgb(255, 255, 255);
 }
 
 .Minecraft p {
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.dis {
     font-weight: 500;
     color: rgb(255, 255, 255);
 }

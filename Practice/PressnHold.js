@@ -4,7 +4,7 @@ $(document).ready(function() {
     let GamePoint = 0;
     let pressStartTime = 0;
     let pressTimer = null;
-    let timeOutDuration = 3000;
+    let timeOutDuration;
     const longPressDuration = 400;
 
 
@@ -166,7 +166,6 @@ $(document).ready(function() {
 
         const currentAlphabet = AlphabetHead.text();
         manualDecode();
-
         if (morseString === currentAlphabet) {
             GamePoint += 1;
             Update();
