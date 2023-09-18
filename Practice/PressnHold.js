@@ -1,8 +1,17 @@
+// To Do lst
+// Win Streak
+// Progress Bar
+// 
+
+// Note
+// after decoded get point??
+
 $(document).ready(function() {
     let Alphabetwant = [''];
     let morseString = '';
     let GamePoint = 0;
     let pressStartTime = 0;
+    let WinStreakPoint = 0;
     let pressTimer = null;
     let timeOutDuration;
     const longPressDuration = 400;
@@ -13,6 +22,7 @@ $(document).ready(function() {
     const AlphabetHead = $('#AlphabetHead');
     const Point = $('#GamePoint');
     const DisplayStage = $('#StageName');
+    const DisplayStreak = $('WinStreak');
 
     function manualDecode() {
         if (Alphabetwant.includes('E') || Alphabetwant.includes('T')) {
@@ -164,19 +174,30 @@ $(document).ready(function() {
             collectedMorseSpan.text(morseString);
         }
 
-        const currentAlphabet = AlphabetHead.text();
         manualDecode();
-        if (morseString === currentAlphabet) {
-            GamePoint += 1;
-            Update();
-            clearMorseString();
-            RandomNext();
-        }
+        AlphabetCorrection();
     });
 
     repeatClear();
     RandomNext();
     Update();
+
+    function AlphabetCorrection() {
+        const currentAlphabet = AlphabetHead.text();
+
+        if (morseString === currentAlphabet) {
+            GamePoint += 1;
+            WinStreakPoint += 1;
+            DisplayStreak.text(WinStreakPoint);
+            Update();
+            clearMorseString();
+            RandomNext();
+        } else if (morseString != currentAlphabet) {
+            WinStreakPoint = 0;
+            DisplayStreak.text(WinStreakPoint);
+        }
+
+    }
 
     /////////////////////////////////////////////////
 
