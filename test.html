@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!--css-->
     <link rel="stylesheet" href="src/test.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;800&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-dark">
@@ -26,16 +30,16 @@
                         <a class="nav-link" href="index.html"><img src="img/slogo.png" class="rounded-4" width="50" height="25"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="menu.html">Menu</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="test.html">Test</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="help.html">Help</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="test.html">Tests</a>
                     </li>
                 </ul>
             </div>
@@ -47,7 +51,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-9 mx-auto">
-                    <!-- <h1 class="display-1"><strong>TEST</strong></h1> -->
+                    <!-- <h2 class="display-1"><strong>TEST</strong></h2> -->
                 </div>
             </div>
         </div>
@@ -58,8 +62,8 @@
         <div class="row justify-content-sm-center  m-4 p-4 rounded-4">
             <section class="text-center">
 
-                <div id="Setting" class="mt-4">
-                    <h1 class="text-secondary display-1 my-5" id="MainHide">Select a Stage</h1>
+                <div id="Setting" class="mt-4" style="display: none; ">
+                    <h1 class="display-1 my-5" id="MainHide">Select a Stage</h1>
                     <div class="row justify-content-evenly justify-content-sm-center bg-black m-4 p-4 rounded-4">
 
                         <div class="col-7 justify-content-between" id="MainHide">
@@ -91,19 +95,19 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-3">
-                                                        <h1>E</h1>
+                                                        <h2>E</h2>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h1>.</h1>
+                                                        <h2>.</h2>
                                                     </div>
                                                 </div>
                                                 <hr>
                                                 <div class="row">
                                                     <div class="col-3">
-                                                        <h1>T</h1>
+                                                        <h2>T</h2>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h1>-</h1>
+                                                        <h2>-</h2>
                                                     </div>
                                                 </div>
                                             </div>
@@ -129,19 +133,19 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-3">
-                                                        <h1>I</h1>
+                                                        <h2>I</h2>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h1>.</h1>
+                                                        <h2>..</h2>
                                                     </div>
                                                 </div>
                                                 <hr>
                                                 <div class="row">
                                                     <div class="col-3">
-                                                        <h1>M</h1>
+                                                        <h2>M</h2>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h1>-</h1>
+                                                        <h2>--</h2>
                                                     </div>
                                                 </div>
                                             </div>
@@ -167,19 +171,19 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-3">
-                                                        <h1>A</h1>
+                                                        <h2>A</h2>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h1>.</h1>
+                                                        <h2>.-</h2>
                                                     </div>
                                                 </div>
                                                 <hr>
                                                 <div class="row">
                                                     <div class="col-3">
-                                                        <h1>N</h1>
+                                                        <h2>N</h2>
                                                     </div>
                                                     <div class="col-9">
-                                                        <h1>-</h1>
+                                                        <h2>-.</h2>
                                                     </div>
                                                 </div>
                                             </div>
@@ -194,191 +198,374 @@
 
 
                             <!-- Modal Stage S-O -->
-                            <div class="modal fade " id="S-O" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="S-O" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage S-O</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>S</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>...</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>O</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>---</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
+
 
                             <!-- Modal Stage U-G -->
-                            <div class="modal fade " id="U-G" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="U-G" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage U-G</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>U</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>..-</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>G</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>--.</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
+
 
                             <!-- Modal Stage R-K -->
-                            <div class="modal fade " id="R-K" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="R-K" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage R-K</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>R</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>.-.</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>K</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>-.-</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
 
+
                             <!-- Modal Stage W-D -->
-                            <div class="modal fade " id="W-D" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="W-D" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage W-D</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>W</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>.--</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>D</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>-..</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage H-Q -->
-                            <div class="modal fade " id="H-Q" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="H-Q" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage H-Q</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>H</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>....</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>Q</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>--.-</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage V-Z -->
-                            <div class="modal fade " id="V-Z" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="V-Z" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage V-Z</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>V</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>...-</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>Z</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>--..</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage F-Y -->
-                            <div class="modal fade " id="F-Y" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="F-Y" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage F-Y</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>F</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>..-.</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>Y</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>-.--</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage L-C -->
-                            <div class="modal fade " id="L-C" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="L-C" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage L-C</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>L</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>.-..</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>C</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>-.-.</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage P-X -->
-                            <div class="modal fade " id="P-X" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="P-X" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage P-X</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>P</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>.--.</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>X</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>-..-</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage J-B -->
-                            <div class="modal fade " id="J-B" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog ">
+                            <div class="modal fade" id="J-B" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                                <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Modal title</h5>
+                                            <h5 class="modal-title " id="exampleModalLabel ">Stage J-B</h5>
                                             <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                                         </div>
-                                        <div class="modal-body ">
-                                            ...
+                                        <div class="modal-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>J</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>.---</h2>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h2>B</h2>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <h2>-...</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer ">
-                                            <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                            <button type="button " class="btn btn-primary ">Play</button>
-                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
+                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
                                     </div>
                                 </div>
                             </div>
@@ -404,14 +591,19 @@
                 </div>
 
 
+
                 <!-- หน้าเล่น -->
-                <button id="Back " style="display: none; ">Back</button>
-                <div id="Main " style="display: none; " class="Minecraft ">
+                <!-- style="display: none; "  -->
+                <button id="Back " class="btn btn-secondary my-2 ">Back</button>
+                <div id="Main " class="Minecraft ">
                     <!-- <p> Stage <span id="StageName "></p> -->
-                    <h1> <span id="AlphabetHead "></span></h1>
-                    <button id="morseButton " class="btn btn-secondary my-2 ">Press and hold for Morse code</button>
-                    <p>Collected Morse code: <span id="collectedMorse "></span></p>
-                    <p>Point: <span id="GamePoint "></span></p>
+                    <h1> <span id="AlphabetHead ">T</span></h1>
+                    <h2><span id="collectedMorse"></span>.--.-.-..</h2>
+                    <button id="morseButton " class="btn btn-success my-2 btn-lg">Press or hold for Morse code</button>
+
+                    <h3 class="mt-4">Point</h3>
+                    <h2><span id="GamePoint">0</span></h2>
+                    <p>Click for . // Hold for -</p>
                 </div>
             </section>
 

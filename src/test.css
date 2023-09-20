@@ -1,3 +1,7 @@
+body {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
 .btn {
     position: relative;
     display: inline-block;
@@ -19,8 +23,20 @@
 }
 
 .Minecraft h1 {
-    font-size: 2500%;
+    font-size: 2000%;
     font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.Minecraft h3 {
+    font-size: 150%;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.Minecraft h2 {
+    font-size: 350%;
+    font-weight: 400;
     color: rgb(255, 255, 255);
 }
 
@@ -34,8 +50,14 @@
     color: rgb(255, 255, 255);
 }
 
-.modal-body h1 {
+.modal-body h2 {
     font-size: 500%;
     font-weight: 500;
     color: rgb(0, 0, 0);
+}
+
+.mt-4 h1 {
+    font-size: 500%;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
 }

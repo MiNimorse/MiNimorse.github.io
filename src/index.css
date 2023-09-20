@@ -1,5 +1,9 @@
 /* Glass Effect */
 
+body {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
 .glass {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
@@ -9,7 +13,7 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.dis{
+.dis {
     position: relative;
     padding: 0 5%;
     display: flex;
@@ -40,7 +44,7 @@
     z-index: -1;
 }
 
-.con{
+.con {
     position: relative;
     display: flex;
     justify-content: center;
@@ -49,7 +53,7 @@
     z-index: -1;
 }
 
-.con .card{
+.con .card {
     position: relative;
     width: 400px;
     height: 380px;
@@ -65,7 +69,7 @@
     backdrop-filter: blur(5px);
 }
 
-.con .card .content{
+.con .card .content {
     padding: 20px;
     text-align: center;
     transition: 0.5s;
