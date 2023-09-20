@@ -1,10 +1,10 @@
 // To Do lst
-// Win Streak
-// Progress Bar
-// 
+// - New Stage select button
+// - Win Streak
+// - Progress Bar??
 
-// Note
-// after decoded get point??
+// Note //
+// - after decoded get point??
 
 $(document).ready(function() {
     let Alphabetwant = [''];
@@ -230,8 +230,6 @@ $(document).ready(function() {
             $('#MainHide').hide();
             $('#Back').show();
             $('#BackHide').show();
-        } else {
-            console.log('Invalid button index:', buttonIndex);
         }
     }
 
