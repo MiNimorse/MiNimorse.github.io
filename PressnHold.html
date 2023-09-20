@@ -3,13 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile</title>
+    <title>Minimorse</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--icon-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!--css-->
-    <link rel="stylesheet" href="src/test.css">
+    <link rel="stylesheet" href="src/PressnHold.css">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +37,7 @@
                         <a class="nav-link" href="menu.html">Menu</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link active" href="test.html">Test</a>
+                        <a class="nav-link active" href="PressnHold.html">Play</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="help.html">Help</a>
@@ -62,34 +63,34 @@
         <div class="row justify-content-sm-center  m-4 p-4 rounded-4">
             <section class="text-center">
 
-                <div id="Setting" class="mt-4" style="display: none; ">
+                <div id="Setting" class="mt-4">
                     <h1 class="display-1 my-5" id="MainHide">Select a Stage</h1>
                     <div class="row justify-content-evenly justify-content-sm-center bg-black m-4 p-4 rounded-4">
 
-                        <div class="col-7 justify-content-between" id="MainHide">
+                        <div id="MainHide" class="col-7 justify-content-between">
 
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#E-T">Stage E-T  </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#I-M">Stage I-M  </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#A-N">Stage A-N  </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#S-O">Stage S-O </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#U-G">Stage U-G </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#R-K">Stage R-K </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#W-D">Stage W-D </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#H-Q">Stage H-Q </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#V-Z">Stage V-Z  </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#F-Y">Stage F-Y </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#L-C">Stage L-C </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#P-X">Stage P-X </button>
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#J-B">Stage J-B </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#E-T">Stage E-T  </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#I-M">Stage I-M  </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#A-N">Stage A-N  </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#S-O">Stage S-O </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#U-G">Stage U-G </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#R-K">Stage R-K </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#W-D">Stage W-D </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#H-Q">Stage H-Q </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#V-Z">Stage V-Z  </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#F-Y">Stage F-Y </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#L-C">Stage L-C </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#P-X">Stage P-X </button>
+                            <button id="MainHide" type="button" class="btn btn-success m-1" data-bs-toggle="modal" data-bs-target="#J-B">Stage J-B </button>
 
                             <!-- Modal Stage E-T -->
-                            <div class="modal fade" id="E-T" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog">
+                            <div class="modal fade" id="E-T" id="MainHide" tabindex="-1 " aria-labelledby="E-T" aria-hidden="true ">
+                                <div class="modal-dialog modal-lg">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Stage E-T</h5>
-                                            <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
+                                            <h5 class="modal-title " id="E-T-modal">Stage E-T</h5>
+                                            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
                                             <div class="container-fluid">
@@ -112,22 +113,22 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                                     <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
                                     </div>
+                                </div>
                                 </div>
                             </div>
 
 
                             <!-- Modal Stage I-M -->
-                            <div class="modal fade" id="I-M" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-                                <div class="modal-dialog">
+                            <div class="modal fade" id="I-M" id="MainHide" tabindex="-1 " aria-labelledby="I-M" aria-hidden="true ">
+                                <div class="modal-dialog modal-lg">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
-                                            <h5 class="modal-title " id="exampleModalLabel ">Stage I-M</h5>
-                                            <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
+                                            <h5 class="modal-title " id="I-M-modal">Stage I-M</h5>
+                                            <button type="button " class="btn-close " data-bs-dismiss="modal" aria-label="Close "></button>
                                         </div>
                                         <div class="modal-body">
                                             <div class="container-fluid">
@@ -150,17 +151,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                                     <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
                                     </div>
+                                </div>
                                 </div>
                             </div>
 
 
                             <!-- Modal Stage A-N -->
-                            <div class="modal fade" id="A-N" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="A-N" id="MainHide" tabindex="-1 " aria-labelledby="A-N" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -188,17 +189,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+
                                     <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
                                     </div>
+                                </div>
                                 </div>
                             </div>
 
 
                             <!-- Modal Stage S-O -->
-                            <div class="modal fade" id="S-O" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="S-O" id="MainHide" tabindex="-1 " aria-labelledby="S-O" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -226,17 +228,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
 
                             <!-- Modal Stage U-G -->
-                            <div class="modal fade" id="U-G" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="U-G" id="MainHide" tabindex="-1 " aria-labelledby="U-G" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -264,17 +266,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+
                                     <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
                                     </div>
+                                </div>
                                 </div>
                             </div>
 
 
                             <!-- Modal Stage R-K -->
-                            <div class="modal fade" id="R-K" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="R-K" id="MainHide" tabindex="-1 " aria-labelledby="R-K" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -302,17 +305,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
 
                             <!-- Modal Stage W-D -->
-                            <div class="modal fade" id="W-D" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="W-D" id="MainHide" tabindex="-1 " aria-labelledby="W-D" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -340,16 +344,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage H-Q -->
-                            <div class="modal fade" id="H-Q" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="H-Q" id="MainHide" tabindex="-1 " aria-labelledby="H-Q" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -377,16 +382,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+ 
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage V-Z -->
-                            <div class="modal fade" id="V-Z" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="V-Z" id="MainHide" tabindex="-1 " aria-labelledby="V-Z" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -414,16 +420,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage F-Y -->
-                            <div class="modal fade" id="F-Y" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="F-Y" id="MainHide" tabindex="-1 " aria-labelledby="F-Y" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -451,16 +458,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage L-C -->
-                            <div class="modal fade" id="L-C" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="L-C" id="MainHide" tabindex="-1 " aria-labelledby="L-C" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -488,16 +496,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage P-X -->
-                            <div class="modal fade" id="P-X" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="P-X" id="MainHide" tabindex="-1 " aria-labelledby="P-X" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -525,16 +534,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Modal Stage J-B -->
-                            <div class="modal fade" id="J-B" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+                            <div class="modal fade" id="J-B" id="MainHide" tabindex="-1 " aria-labelledby="J-B" aria-hidden="true ">
                                 <div class="modal-dialog">
                                     <div class="modal-content ">
                                         <div class="modal-header ">
@@ -562,10 +572,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                                        <button type="button " class="btn btn-primary changeStageButton" data-bs-dismiss="modal ">Play</button>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary changeStageButton" data-bs-dismiss="modal">Play</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -593,18 +604,18 @@
 
 
                 <!-- หน้าเล่น -->
-                <!-- style="display: none; "  -->
-                <button id="Back " class="btn btn-secondary my-2 ">Back</button>
-                <div id="Main " class="Minecraft ">
+                <div id="Player" style="display: none; ">
+                <button id="Back"class="btn btn-secondary my-2 ">Back</button>
+                <div id="Main" class="Minecraft ">
                     <!-- <p> Stage <span id="StageName "></p> -->
-                    <h1> <span id="AlphabetHead ">T</span></h1>
-                    <h2><span id="collectedMorse"></span>.--.-.-..</h2>
-                    <button id="morseButton " class="btn btn-success my-2 btn-lg">Press or hold for Morse code</button>
-
+                    <h1><span id="AlphabetHead"></span></h1>
+                    <h2>[<span id="collectedMorse"></span>]</h2>
+                    <button id="morseButton" class="btn btn-success my btn-lg">Press or hold for Morse code</button>                     
                     <h3 class="mt-4">Point</h3>
-                    <h2><span id="GamePoint">0</span></h2>
+                    <h2><span id="GamePoint"></span></h2>
                     <p>Click for . // Hold for -</p>
                 </div>
+            </div>
             </section>
 
         </div>
@@ -613,12 +624,12 @@
     <!--Footer-->
     <footer class="d-flex flex-wrap justify-content-between align-items-center px-5 py-3 bg-white fixed-bottom ">
         <div class="col-md-4 d-flex align-items-center ">
-            <span class="mb-3 mb-md-0 text-body-secondary ">&copy; .. / .-.. --- ...- . / -.-- --- ..- / -.- .-. ..- / ... --- --- -. / .-. ..- -. --.</span>
+            <span class="mb-3 mb-md-0 text-body-secondary ">.. / .-.. --- ...- . / -.-- --- ..- / -.- .-. ..- / ... --- --- -. / .-. ..- -. --.</span>
         </div>
 
     </footer>
 
-    <!--JS-->
+    <!-- Include Bootstrap CSS and JavaScript -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js "></script>
     <script src="/Practice/PressnHold.js "></script>
 

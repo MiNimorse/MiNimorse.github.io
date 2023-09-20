@@ -1,5 +1,4 @@
 // To Do lst
-// - New Stage select button
 // - Win Streak
 // - Progress Bar??
 
@@ -11,18 +10,17 @@ $(document).ready(function() {
     let morseString = '';
     let GamePoint = 0;
     let pressStartTime = 0;
-    let WinStreakPoint = 0;
+    //let WinStreakPoint = 0;
     let pressTimer = null;
     let timeOutDuration;
     const longPressDuration = 400;
-
 
     const morseButton = $('#morseButton');
     const collectedMorseSpan = $('#collectedMorse');
     const AlphabetHead = $('#AlphabetHead');
     const Point = $('#GamePoint');
     const DisplayStage = $('#StageName');
-    const DisplayStreak = $('WinStreak');
+    //const DisplayStreak = $('WinStreak');
 
     function manualDecode() {
         if (Alphabetwant.includes('E') || Alphabetwant.includes('T')) {
@@ -154,6 +152,23 @@ $(document).ready(function() {
             DisplayStage.append(characterElement);
         }
     }
+    
+    function AlphabetCorrection() {
+        const currentAlphabet = AlphabetHead.text();
+
+        if (morseString === currentAlphabet) {
+            GamePoint += 1;
+            //WinStreakPoint += 1;
+            //DisplayStreak.text(WinStreakPoint);
+            Update();
+            clearMorseString();
+            RandomNext();
+        // } else if (morseString != currentAlphabet) {
+        //    WinStreakPoint = 0;
+        //    DisplayStreak.text(WinStreakPoint);
+        }
+
+    }
 
     morseButton.mousedown(function() {
         pressStartTime = new Date().getTime();
@@ -177,27 +192,11 @@ $(document).ready(function() {
         manualDecode();
         AlphabetCorrection();
     });
+    
 
     repeatClear();
     RandomNext();
     Update();
-
-    function AlphabetCorrection() {
-        const currentAlphabet = AlphabetHead.text();
-
-        if (morseString === currentAlphabet) {
-            GamePoint += 1;
-            WinStreakPoint += 1;
-            DisplayStreak.text(WinStreakPoint);
-            Update();
-            clearMorseString();
-            RandomNext();
-        } else if (morseString != currentAlphabet) {
-            WinStreakPoint = 0;
-            DisplayStreak.text(WinStreakPoint);
-        }
-
-    }
 
     /////////////////////////////////////////////////
 
@@ -225,9 +224,11 @@ $(document).ready(function() {
             Update();
             StageName(Alphabetwant);
             console.log('Alphabetwant array has been changed to:', Alphabetwant);
-            $('.changeStageButton').hide();
+            //$('.changeStageButton').hide();
             $("#Main").show();
             $('#MainHide').hide();
+            $('#Player').show();
+            $('#Setting').hide();
             $('#Back').show();
             $('#BackHide').show();
         }
@@ -242,6 +243,8 @@ $(document).ready(function() {
         $('.changeStageButton').show();
         $("#Main").hide();
         $('#MainHide').show();
+        $('#Player').hide();
+        $('#Setting').show();
         $('#Back').hide();
         $('#BackHide').hide();
     });
