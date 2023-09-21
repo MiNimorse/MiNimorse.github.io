@@ -13,6 +13,7 @@ $(document).ready(function() {
     //let WinStreakPoint = 0;
     let pressTimer = null;
     let timeOutDuration;
+    // let Decodedelay = 500;
     const longPressDuration = 400;
 
     const morseButton = $('#morseButton');
@@ -188,8 +189,9 @@ $(document).ready(function() {
             morseString += '.';
             collectedMorseSpan.text(morseString);
         }
-
+        
         manualDecode();
+        
         AlphabetCorrection();
     });
     
